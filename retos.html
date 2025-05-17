@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Biomar</title>
+        <link rel="stylesheet" href="style.css">
+        <style type="text/css"> 
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+    font-family: "Poppins", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+ .titulos { 
+     width: auto; 
+     list-style-type: none;  
+     background-color:#f1faee; 
+     color: #00b4d8; 
+     margin-left:40px; 
+     margin-right: 40px; 
+     padding: 10px; 
+     text-align: left; 
+     margin-top: 0;
+     margin-bottom: 5px;
+     font-family: "Poppins", bold;
+     font-size: 20px;
+}  
+li{
+    font-family:"Poppins";
+    font-weight: normal;
+    font-size: 16px;
+}
+h3{
+    font-family: "poppins",bold;
+    font-size: 25px;
+    text-align: center;
+}
+  
+.collapsible-container ol {
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.collapsible-container li {
+    margin-bottom: 1.5rem;
+}
+
+.collapsible-container p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.col {
+      width: 40%;
+      flex: 1;
+      color: #005f73;
+      background-color: #f1faee;
+      padding: 50px;
+      text-align: left
+}
+.pr {
+    color: #005f73;
+    text-align: left;
+    margin-left: 70px;
+}
+.conte {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    padding: 30px;
+    background-color: #f1faee;
+}
+
+.quiz:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+    border: 5px solid #00B4D8;
+    filter: brightness(1.05);
+}
+.pregunta {    
+    margin-bottom: 20px;
+}
+
+.pregunta p {
+        color: #ffff;
+        font-weight:lighter bold;
+        margin-bottom: 10px;
+  
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 5px solid #ddd;
+    border-radius:99px;
+    resize: vertical;
+    min-height: 80px;
+    font-family: "Poppins";
+	text-align: center;
+    
+    
+}
+
+textarea:focus {
+    border-color: #93E6E6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+    
+}
+
+.btn-enviar {
+  background-color: #3498db;
+    color: white;
+    border-color: #93E6E6;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto 0;
+}
+.btn-registro {
+    background-color: #D9D9D9;
+    color: #005F73;
+    border-color: #93E6E6;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight:bold;
+    font-size: 30px
+}
+.btn-descargar{
+    background-color: #D9D9D9;
+    color: #005F73;
+    border-radius: 10px;
+    padding: 12px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight:bold;
+    font-size: 30px
+	
+}
+    
+.btn-registro:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+    border: 5px solid #3498db;
+	border-radius: 10px
+    filter: brightness(1.05);
+    
+}
+.quiz:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+     
+.contenedor-imagen {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.subtitulo{ 
+     width: auto; 
+     list-style-type: none;  
+     background-color:#f1faee; 
+     color: #005f73; 
+     margin-left:40px; 
+     margin-right: 40px; 
+     padding: 10px; 
+     text-align: left; 
+     margin-top: 10px;
+     margin-bottom: 5px;
+     font-family: "Poppins";
+     font-weight: bold;
+     font-size: 25px;
+} 
+h8{ 
+    width: auto;
+     color:#005f73;
+    text-align: Center; 
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 40px;             
+}
+
+h2{
+   width: auto;
+   color:#005f73;
+   text-align: left;
+   font-family: "Poppins";
+   font-weight: bold;
+   font-size: 40px;
+}
+p{
+    font-family: "Poppins";
+    font-weight: normal;
+    font-weight: 10px;
+}
+.contenedor.misterios {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f1faee;
+  flex-wrap: nowrap; 
+  color: #005f73;
+}
+
+.contenedor.misterios .texto {
+  flex: 0 0 50%; 
+  min-width: 250px;
+  margin-left: 15px;
+  text-align: left;
+  color: #005f73;
+}
+
+.contenedor.misterios .imagen {
+  flex: 0 0 50%;  
+  min-width: 250px;
+}
+
+.contenedor.misterios .imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 500px; 
+}
+.img_cent{  
+    width: 25%; 
+    float: center; 
+    margin-left:20px;
+    margin-right: 20px;
+} 
+.img_centjuego{
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 10px;
+} 
+.img_centjuego:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.imgenes_box{
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+         
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    padding: 30px;
+}
+.columna {
+    width: 100%;
+    max-width: 700px;
+    color: #005f73;
+    background-color: #f1faee;
+    padding: 30px;
+    text-align: left;
+}   
+.cuadrojuegos {
+            border: 1px solid cadetblue;
+            background-color: cadetblue;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+}
+.cuadrojuego{
+             display: inline-block;
+             height: auto;
+             width: auto;
+             background-color: cadetblue;
+             border-radius: 10px;
+}
+.azulciel{ 
+    display: inline-block;
+    width: 80%; 
+    height: auto; 
+    background-color: #00B4D8;
+    color: white;
+    padding: 30px; 
+    margin-top: 10px; 
+    margin-bottom: 30px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center; 
+    font-family: "Poppins", bold;
+    font-weight: 600;
+    border-radius: 50px;
+    border-left: 5px solid #005f73;
+}
+         
+.quiz {
+    max-width: 800px;
+    margin: 0 auto 30px auto; /* centrado horizontal */
+    background-color: #D9D9D9;
+    color: #005f73;
+    padding: 20px;
+    border-radius: 50px;
+    border-left: 5px solid #005f73;
+}
+
+.azulciel:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+    border: 5px solid #93E6E6;
+    filter: brightness(1.05);
+}
+		 
+.flipcontenedor {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; /* Hace que bajen si no caben */
+  gap: 20px;
+  padding: 30px;
+}
+
+.flipcolum {
+  width: 48%; /* Dos columnas lado a lado */
+  min-width: 300px; 
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Flip box interna */
+.flip-box {
+  width: 100%;
+  height: 100px;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 100px;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  border-radius: 100px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: #005f73;
+}
+
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateX(180deg);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .flipcolum {
+    width: 100%;
+    align-items: center; /* Centra el contenido de la columna */
+  }
+         
+@media (max-width: 768px) {
+.quiz, .columna, .cuadrojuegos, .flip-box {
+                                           width: 90% !important;
+                                           margin: 0 auto;
+    }
+}
+
+    </style> 
+</head>
+<body>
+  <header>
+ <a href="index.html"><img class="img_centro" src="imagenes/bio.png"></a>
+ <h1>LA VIDA EN LOS OCÉANOS</h1> 
+  </header>
+<nav> 
+        <ul>
+            <li><a href="articulos.html">ARTÍCULOS</a></li>
+            <li><a href="explora.html"> EXPLORA </a></li>
+            <li><a href="retos.html">RETOS</a> </li>
+            <li><a href="interactua.html">INTERACTUA</a> </li>
+            <li><a href="galeria.html">GALERIA</a> </li>
+            
+        </ul>
+     </nav> 
+<section class="intro">
+    <p>El océano es un mundo… ¡y tú estás a punto de explorarlo!</p>
+  </section>
+    
+  <section class="azul" >
+    <h4>Retos</h4>
+  </section>
+  
+<section class="subtitulo">
+        <h4>Récords marinos que no sabías:</h4>
+  </section>
+  
+<div class="flipcontenedor">
+<div class="flipcolum">
+<section>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h3>EL ANIMAL MARINO MÁS VENENOSO:</h3>
+    </div>
+    <div class="flip-box-back">
+      <h3> AVISPA DE MAR</h3>
+      <h3>(chironex fleckeri)</h3>
+    </div>
+ </div>
+</div>
+</section>
+<section>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h3>EL QUE SALTA MÁS ALTO:</h3>
+    </div>
+    <div class="flip-box-back">
+      <h3>DELFÍN MULAR</h3>
+      <h3>(tursiops truncatus)</h3>
+    </div>
+ </div>
+</div>
+</section>
+<section>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h3>EL PEZ MÁS GRANDE:</h3>
+    </div>
+    <div class="flip-box-back">
+      <h3>TIBURÓN BALLENA</h3>
+      <h3>(rhincodon typus)</h3>
+    </div>
+ </div>
+</div>
+</section>
+<section>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h3>EL MÁS LARGO:</h3>
+    </div>
+    <div class="flip-box-back">
+      <h3>MEDUSA MELENA DE LEÓN </h3>
+      <h3>(cyanea capillata)</h3>
+    </div>
+ </div>
+</div>
+</section>
+</div>
+
+<div class="flipcolum">
+<section>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h3>EL MÁS LONGEVO:</h3>
+    </div>
+    <div class="flip-box-back">
+      <h3>ESPONJA BARRIL </h3>
+      <h3>(xestospongia testudinaria)</h3>
+    </div>
+ </div>
+</div>
+</section>
+<section>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h3>EL ANIMAL MÁS INTELIGENTE:</h3>
+    </div>
+    <div class="flip-box-back">
+      <h3>CACHALOTE </h3>
+      <h3>(Physeter macrocephalus)</h3>
+    </div>
+ </div>
+</div>
+</section>
+<section>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h3>EL PEZ MÁS LENTO:</h3>
+    </div>
+    <div class="flip-box-back">
+      <h3>CABALLITO DE MAR PIGMEO</h3>
+      <h3>(Hippocampus bargibanti)</h3>
+    </div>
+ </div>
+</div>
+</section>
+<section>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h3>EL PEZ MÁS RÁPIDO:</h3>
+    </div>
+    <div class="flip-box-back">
+      <h3>PEZ VELA del ATLÁNTICO </h3>
+      <h3>(istiophorus albicans)</h3>
+    </div>
+ </div>
+</div>
+</section>
+</div>
+</div>
+
+<div class="contenedor misterios">
+  <div class="texto">
+    <h4 id="curiosidades">Misterios sin resolver</h4>
+<section class="subtitulo"> 
+    <div class="collapsible-container">      
+    <ol>
+        <li>
+            <strong>Sonidos inexplicables</strong>
+            <p>A lo largo de los años se han grabado varios sonidos inexplicables. Dos de los más famosos son "El Bloop" y "Julia". Estos sonidos tienen que proceder de objetos (o puede que criaturas) muy grandes.</p>
+        </li>
+        <li>
+            <strong>La verdadera Atlántida</strong>
+            <p>Hay quien dice que se ha descubierto la ciudad submarina perdida de Atlántida junto a la isla de Delos en Grecia. Se encontró toda una ciudad planificada con varios edificios, patios y muchas piezas de cerámica.</p>
+        </li>
+        <li>
+            <strong>El Triángulo de las Bermudas</strong>
+            <p>El Triángulo de las Bermudas, que deriva su nombre de los 46,451 metros cuadrados de océano entre Miami, las Bermudas y Puerto Rico, es una de las leyendas marinas más conocidas. Empezaron a alegar todo tipo de extraños sucesos en la zona, incluyendo la desaparición de varios barcos sin que nadie enviara una señal de socorro por radio.</p>
+        </li>
+        <li>
+            <strong>El Mar del Diablo</strong>
+            <p>Es uno de los doce vértices viles del mundo a la altura del Triángulo de las Bermudas. Es un lugar donde los aviones caen del cielo como pájaros y grandes depósitos de metano causan explosiones. También es el lugar donde EE. UU. perdió más de 20 submarinos durante la Segunda Guerra Mundial, y donde desaparecen barcos del doble de tamaño que el Titanic.</p>
+        </li>
+        <li>
+            <strong>El Kraken</strong>
+            <p>En 1870 apareció un calamar gigante en Nueva Zelanda. Los aldeanos de la zona dijeron que era el mismo animal que previamente había atrapado y hundido una canoa. La capa del calamar, esa cosa en forma de cono que lleva encima de la cabeza, medía más de 2,7 metros de longitud.</p>
+        </li>
+    </ol>
+</div>
+</section>
+
+</div>
+<div class="imagen">
+<img src="imagenesretos/atlantis.jpg" width="100%" height="50%">
+</div> 
+ 
+</div>
+
+
+
+  <br>
+    
+    <div class="pr">
+        <h2>PREGUNTAS</h2></div>
+    
+        <div class="conte">
+        <div class="quiz">
+            <h8>QUIZ</h8><br><br>
+            <form>
+                <div class="pregunta">
+                    <p>Pregunta 1: ¿Cuál es el animal mas inteligente?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 2: ¿Cuál es el pez mas lento?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 3: ¿Cuál es el animal mas venenoso?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 4: ¿Cuál es el animal marino que salta mas alto?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </div>
+        
+        <div class="quiz">
+            <h8>QUIZ</h8><br><br>
+            <form>
+                <div class="pregunta">
+                    <p>Pregunta 1: ¿Cuáles son los dos sonidos inexplicables más famosos?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 2:¿Que sucede en el triángulo de las Bermudas?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 3: ¿En que lugar desaparecieron los submarinos de EE.UU.?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 4: ¿En que año supuestamente aparecio el Kraken?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+            <br>
+        </div>
+        </div>
+        <br>
+ 
+  <section class="azul" >
+    <h4 id="cinco">Juegos</h4><br>
+  </section> <br><br>
+<section class="subtitulo">
+    <h1>JUEGOS</h1>
+</section>
+<div class="contenedor">
+<div class="columna">
+<section class="azulciel">
+<a href="https://es.y8.com/games/fish_eat_fish_3_players"><img class="img_centjuego" src="imagenesretos/pulpi.jpg"></a>
+<h2 class="tituloquiz">Encuentra al pulpo:</h2>
+    <p>Sumérgete en el océano y ayuda a nuestros amiguitos marinos a encontrar a Pulpi, un travieso pulpo que se esconde entre las rocas, los corales y las algas. Explora diferentes escenarios acuáticos, resuelve pistas sencillas y desarrolla habilidades como la observación, la memoria y la lógica, mientras te diviertes con animaciones coloridas y sonidos del mar.</p>
+</section>
+</div>
+<div class="columna">
+<section class="azulciel">
+<a href="https://es.y8.com/games/la_shark"><img class="img_centjuego" src="imagenesretos/delfi.jpg"></a>
+    <h2 class="tituloquiz">Carrera de delfines:</h2>
+     <p>Sumérgete en el océano y ayuda a nuestros amiguitos marinos a encontrar a Pulpi, un travieso pulpo que se esconde entre las rocas, los corales y las algas. Explora diferentes escenarios acuáticos, resuelve pistas sencillas y desarrolla habilidades como la observación, la memoria y la lógica, mientras te diviertes con animaciones coloridas y sonidos del mar.</p>   
+</section>
+</div>
+<div class="columna">
+<section class="azulciel">
+  <a href="https://es.y8.com/games/the_depths_"><img class="img_centjuego" src="imagenesretos/buci.jpg"></a>
+    <h2 class="tituloquiz">Explorador del azul profundo:</h2>
+     <p>Sumérgete en el océano y ayuda a nuestros amiguitos marinos a encontrar a Pulpi, un travieso pulpo que se esconde entre las rocas, los corales y las algas. Explora diferentes escenarios acuáticos, resuelve pistas sencillas y desarrolla habilidades como la observación, la memoria y la lógica, mientras te diviertes con animaciones coloridas y sonidos del mar.</p>   
+</section>
+</div>
+</div>
+
+	   <br>
+    
+    <div class="pr">
+        <h2>PREGUNTAS</h2></div>
+    
+        <div class="conte">
+        <div class="quiz">
+            <h8>QUIZ</h8><br><br>
+            <form>
+                <div class="pregunta">
+                    <p>Pregunta 1: ¿Qué animal puede cambiar de color para camuflarse?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 2: ¿Cuántos brazos tiene un pulpo?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 3: ¿Qué puede hacer un pulpo para escapar?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 4: ¿Los pulpos pueden cambiar de color?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+        </div>
+        
+        <div class="quiz">
+            <h8>QUIZ</h8><br><br>
+            <form>
+                <div class="pregunta">
+                    <p>Pregunta 1: ¿Qué ecosistema marino  es vital para la vida marina?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 2:¿Qué animal marino vive en los arrecifes de coral?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 3: ¿Qué tienen las tortugas marinas para moverse?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <div class="pregunta">
+                    <p>Pregunta 4: ¿Qué amenaza a los arrecifes de coral?</p>
+                    <textarea rows="3" placeholder="Escribe tu respuesta aquí..."></textarea>
+                </div>
+                
+                <button type="submit" class="btn-enviar">Enviar</button>
+            </form>
+            <br>
+        </div>
+        </div>
+        <br>
+        
+        
+<section class="subtitulo">
+    <h1> DIBUJOS</h1>
+</section>
+
+<div class="contenedor">
+<div class="columna">
+<section class="azulciel">
+<img class="img_centjuego" src="imagenesretos/gavi.jpg">
+<button type="submit" class="btn-descargar"><a href="imagenesretos/gavi.jpg" download>Descargar</a></button>
+</section>
+</div>
+
+<div class="columna">
+<section class="azulciel">
+<img class="img_centjuego" src="imagenesretos/cabi.jpg">
+<button type="submit" class="btn-descargar"><a href="imagenesretos/cabi.jpg" download>Descargar</a></button> 
+</section>
+</div>
+
+<div class="columna">
+<section class="azulciel">
+   <img class="img_centjuego" src="imagenesretos/subi.png">
+   <button type="submit" class="btn-descargar"><a href="images/imagenesretos/subi.jpg" download>Descargar</a></button>
+</section>
+</div>
+</div>   
+ 
+        <br>
+         <div class="registro">
+            <p><strong>REGISTRATE y ¡Explora con NOSOTROS!</strong>
+                <button type="submit" class="btn-registro"><a href="index.html">Aquí</a></button></p>
+        </div>
+    
+</body>
+<footer>
+        <div style="text-align: center">
+           <h7><b>Este sitio fue creado con el objetivo de fomentar la conciencia y protección de los océanos.</b></h7>
+           <br>
+    <p>  © 2025 BIOMAR - Explora, Aprende y Cuida el Océano<br>
+🔗 Inicio | Sobre Nosotros | Explora Animales | Juegos | Videos y Documentales |<br> Contacto
+📧 Contáctanos: bio@mar.org  <br>📍 Proyecto educativo para jóvenes exploradores del océano  📱 Síguenos:</p>
+          <br>
+          <img class="instagram" src="imagenes/instagram.png" alt="Instagram">
+          <img class="facebook" src="imagenes/facebook.png" alt="Facebook">
+        </div>
+  </footer>
+</html>
