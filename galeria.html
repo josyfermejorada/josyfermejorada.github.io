@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Biomar</title>
+        <link rel="stylesheet" href="style.css">
+        <style type="text/css"> 
+ .section_filtros img{
+    width: 25%;
+    display:inline-block;
+    margin-left: 10px;
+    margin-right: 10px;}
+
+}
+.galeria{
+    text-align: center;
+}
+.galeria img{
+    width: 25%;
+    display:inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+         }
+         .intros{
+              margin-top: 20px; 
+    margin-bottom: 10px; 
+             color:#005f73;
+         }
+         .carousel {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  position: relative;
+  height: 400px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-slide img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 10px;
+}
+
+.carousel-indicators button {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carousel-indicators button.active {
+  background-color: #333;
+}
+
+    </style> 
+</head>
+<body>
+  <header>
+ <a href="index.html"><img class="img_centro" src="imagenes/bio.png"></a>
+ <h1>LA VIDA EN LOS OCÉANOS</h1> 
+  </header>
+<nav> 
+        <ul>
+            <li><a href="articulos.html">ARTÍCULOS </a></li>
+            <li><a href="explora.html"> EXPLORA </a></li>
+            <li><a href="retos.html">RETOS</a> </li>
+            <li><a href="interactua.html">INTERACTUA</a> </li>
+            <li><a href="galeria.html">GALERIA</a> </li>
+            
+        </ul>
+     </nav> 
+<section class="intro">
+    <p>El océano es un mundo… ¡y tú estás a punto de explorarlo!</p>
+  </section>
+    
+  <section class="azul" >
+    <h4>Galeria</h4>
+  </section>
+     
+  <div class="galeria">
+    <img src="Imagenesgaleria/galeria1.jpg" alt="galeria1">
+    <img src="Imagenesgaleria/galeria2.jpg" alt="galeria2">
+    <img src="Imagenesgaleria/galeria3.jpg" alt="galeria3">
+    <img src="Imagenesgaleria/galeria4.jpg" alt="galeria4">
+    <img src="Imagenesgaleria/galeria5.jpg" alt="galeria5">
+    <img src="Imagenesgaleria/galeria6.jpg" alt="galeria6">
+    <img src="Imagenesgaleria/galeria7.jpg" alt="galeria7">
+    <img src="Imagenesgaleria/galeria8.jpg" alt="galeria8">
+    <img src="Imagenesgaleria/galeria9.jpg" alt="galeria9">
+  </div>
+
+  <h4 class="intros">Proyectos</h4>
+  <div class="carousel" id="carousel">
+  <div class="carousel-track">
+    <div class="carousel-slide"><img src="Imagenesgaleria/caru1.jpg" alt="Imagen 1"></div>
+    <div class="carousel-slide"><img src="Imagenesgaleria/caru2.jpg" alt="Imagen 2"></div>
+    <div class="carousel-slide"><img src="Imagenesgaleria/caru3.jpg" alt="Imagen 3"></div>
+  </div>
+</div>
+
+<div class="carousel-indicators" id="carousel-indicators">
+  <button class="active"></button>
+  <button></button>
+  <button></button>
+</div>
+<br>
+<script>
+  const track = document.querySelector('.carousel-track');
+  const indicators = document.querySelectorAll('.carousel-indicators button');
+  let currentIndex = 0;
+
+  function updateCarousel(index) {
+    track.style.transform = `translateX(-${index * 100}%)`;
+
+    indicators.forEach((btn, i) => {
+      btn.classList.toggle('active', i === index);
+    });
+
+    currentIndex = index;
+  }
+
+  indicators.forEach((btn, index) => {
+    btn.addEventListener('click', () => updateCarousel(index));
+  });
+</script> 
+        <br>
+         <div class="registro">
+            <p><strong>REGISTRATE y ¡Explora con NOSOTROS!</strong>
+                <button type="submit" class="btn-registro"><a href="index.html">Aquí</a></button></p>
+        </div>
+    
+</body>
+<footer>
+        <div style="text-align: center">
+           <h7><b>Este sitio fue creado con el objetivo de fomentar la conciencia y protección de los océanos.</b></h7>
+           <br>
+      <p>© 2025 BIOMAR - Explora, Aprende y Cuida el Océano<br>
+🔗 Inicio | Sobre Nosotros | Explora Animales | Juegos | Videos y Documentales |<br> Contacto
+📧 Contáctanos: bio@mar.org  <br>📍 Proyecto educativo para jóvenes exploradores del océano  📱 Síguenos:</p>
+          <br>
+          <img class="instagram" src="imagenes/instagram.png" alt="Instagram">
+          <img class="facebook" src="imagenes/facebook.png" alt="Facebook">
+        </div>
+  </footer>
+</html>

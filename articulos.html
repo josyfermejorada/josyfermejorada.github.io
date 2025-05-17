@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Biomar</title>
+        <link rel="stylesheet" href="style.css">
+        <style type="text/css"> 
+ 
+.fila {
+      margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+         
+    .boton-isla, .espacio-imagen {
+      width: 300px;
+      height: 300px;
+      border-radius: 30px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: center;
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+      transition: transform 0.2s ease;
+      min-width: 10%;
+    min-height: 10%;
+    }
+
+    .boton-isla {
+      background-color: #d0f0ff;
+      cursor: pointer;
+    }
+
+    .boton-isla:hover {list-style-type: none;
+      transform: scale(1.05);
+        border: 5px solid #93E6E6;
+    filter: brightness(1.1);
+    }
+
+    .boton-isla img {list-style-type: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .boton-isla span {list-style-type: none;
+        color: #005f73 ;
+      position: relative;
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 12px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .espacio-imagen img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+        min-width: 70px;
+    }
+
+    section {
+      padding: 100px 20px;
+      margin-top: 30px;
+    }
+    @media screen and (max-width: 900px) {
+      .fila {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .espacio-imagen {
+        display: none;
+      }
+.boton-isla {
+    width: 25%;
+    display:inline-block;
+    margin-left: 10px;
+    margin-right: 10px;
+         }
+    </style> 
+</head>
+<body>
+  <header>
+ <a href="index.html"><img class="img_centro" src="imagenes/bio.png"></a>
+ <h1>LA VIDA EN LOS OCÉANOS</h1> 
+  </header>
+<nav> 
+        <ul>
+            <li><a href="articulos.html">ARTÍCULOS </a></li>
+            <li><a href="explora.html"> EXPLORA </a></li>
+            <li><a href="retos.html">RETOS</a> </li>
+            <li><a href="interactua.html">INTERACTUA</a> </li>
+            <li><a href="galeria.html">GALERIA</a> </li>
+            
+        </ul>
+     </nav> 
+<section class="intro">
+    <p>El océano es un mundo… ¡y tú estás a punto de explorarlo!</p>
+  </section>
+    
+  <section class="azul" >
+    <h4>Artículos</h4>
+  </section>
+    
+ <div class="fila">
+     <a href="explora.html#explorando" class="boton-isla">
+       <img src="imagenesarticulos/Explorando.jpg" alt="Explorando los océanos">
+        <span>Explorando los Océanos</span>
+      </a>
+      <a href="explora.html#animales" class="boton-isla">
+        <img src="imagenesarticulos//Animales.png" alt="Animales Marinos Asombrosos">
+        <span>Animales Marinos Asombrosos</span>
+      </a>
+       <a href="explora.html#oceanos" class="boton-isla">
+        <img src="imagenesarticulos/Protegiendo.jpg" alt="Protegiendo los océanos">
+        <span>Protegiendo los Océanos</span>
+      </a>
+      <a href="retos.html#curiosidades" class="boton-isla">
+        <img src="imagenesarticulos/curiosidades.jpeg" alt="Curiosidade">
+        <span>Curiosidades</span>
+      </a>
+      
+       <a href="retos.html" class="boton-isla">
+        <img src="imagenesarticulos/Retos.jpg" alt="Retos">
+        <span>Retos</span>
+      </a>
+      
+      <a href="interactua.html" class="boton-isla">
+        <img src="imagenesarticulos/interactua.jpg"alt="Interactua">
+        <span>Interactua</span>
+      </a>
+      
+      <a href="galeria.html" class="boton-isla">
+        <img src="imagenesarticulos/Comunidad.jpg" alt="Comunidad">
+        <span>Galeria</span>
+      </a>
+      </div>
+  <div class="fila">
+           <div class="espacio-imagen">
+        <img src="imagenesarticulos/mememar.jpg" alt="Imagen meme">
+      </div>
+    </div>
+       
+        <br>
+         <div class="registro">
+            <p><strong>REGISTRATE y ¡Explora con NOSOTROS!</strong>
+                <button type="submit" class="btn-registro"><a href="index.html">Aquí</a></button></p>
+        </div>
+    
+    
+</body>
+<footer>
+        <div style="text-align: center">
+           <h7><b>Este sitio fue creado con el objetivo de fomentar la conciencia y protección de los océanos.</b></h7>
+           <br>
+     <p>© 2025 BIOMAR - Explora, Aprende y Cuida el Océano<br>
+🔗 Inicio | Sobre Nosotros | Explora Animales | Juegos | Videos y Documentales |<br> Contacto
+📧 Contáctanos: bio@mar.org  <br>📍 Proyecto educativo para jóvenes exploradores del océano  📱 Síguenos:</p>
+          <br>
+          <img class="instagram" src="imagenes/instagram.png" alt="Instagram">
+          <img class="facebook" src="imagenes/facebook.png" alt="Facebook">
+        </div>
+  </footer>
+</html>

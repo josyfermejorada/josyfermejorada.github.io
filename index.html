@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Biomar</title>
+        <link rel="stylesheet" href="style.css">
+        <style type="text/css">
+            
+video {  
+   width: 100%;
+   height: auto;
+   margin-left: auto;
+   margin-right: auto;
+   display: block
+}                  
+.video-section {
+    width: 100%;
+    background: none;
+    display: block;
+    overflow: hidden;
+    padding: 30px; 
+    margin-top: 10px; 
+    margin-bottom: 30px; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+.azul{ 
+    width: 80%; 
+    height: auto; 
+    background-color:#005f73;
+    color: #f1faee;
+    text-align: center;
+    padding: 30px; 
+    margin-top: 30px; 
+    margin-bottom: 30px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-family: "Poppins", bold;
+    font-weight: 400;
+} 
+
+.contenedor-registro {
+    width: 100%; 
+    height: auto; 
+    background-color:#00B4D8;
+    color: #00B4D8;
+    text-align: center;
+    padding: 20px; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    font-family: "Poppins", bold;
+    font-weight: 100px;
+}
+
+/* Cabecera */
+        
+.cabecera h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: "Poppins";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.barra {
+    color: #D9D9D9;
+    margin: 0 5px;
+}
+
+
+_______________________________________________
+form{
+    width: 50%;
+    height: auto;
+    padding: 50px;
+    background-color: #005f73;
+    border-radius: 30px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.reg {
+    width: 80%;
+    height: auto;
+    background-color: transparent; 
+    color: #f1faee;
+    text-align: center;
+    padding: 30px;
+    margin: 30px auto;
+    font-family: "Poppins", bold;
+    font-weight: 300;
+}               
+.quiz {
+  width: 80%;
+  background-color: #00B4D8;
+  color: #005F73;
+  padding: 40px;
+  border-radius: 40px;
+  margin: 0 auto 30px auto; 
+  border-left: 5px solid #93E6E6;
+}
+                
+.quiz:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.6);
+    border: 5px solid #93e6e6;
+    filter: brightness(1.05);
+}
+        
+h2 {
+    color: #f1faee;
+    text-align: center;
+    font-family: "Poppins", bold;
+    font-size: 30px;
+    font-weight: bold;
+}
+.form-group-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.form-group-horizontal label {
+  width: 150px;
+  text-align: right;
+  font-weight: bold;
+  color: #ffff;
+  font-family: "Poppins";
+}
+
+.form-group-horizontal input {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-family: "Poppins";
+  background-color: #ddd;
+  color: #005F73;
+}
+
+.form-group-horizontal input:focus {
+  border-color: #93E6E6;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+textarea {
+    width: 50%;
+    padding: 10px;
+    border: 5px solid #ddd;
+    border-radius:10px;
+    resize: vertical;
+    min-height: 80px;
+    font-family: "Poppins"; 
+}
+
+textarea:focus {
+    border-color: #93E6E6;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);  
+}
+
+
+/* Botones */
+.btn-enviar {
+    background-color: #3498db;
+    color: white;
+    border-color: #93E6E6;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 20px auto 0;
+    margin-top: 0
+}
+.btn-registro {
+    background-color: #D9D9D9;
+    color: #005F73;
+    border-color: #93E6E6;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight:bold;
+    font-size: 30px
+}
+    
+.btn-registro:hover {
+    background-color: #93E6E6;
+}
+
+    </style> 
+</head>
+    <body>
+        <header>
+            <a href="index.html"><img class="img_centro" src="imagenes/bio.png"></a>
+            <h1>LA VIDA EN LOS OCÉANOS</h1>
+        </header>
+        <nav>
+         <ul>
+            <li><a href="articulos.html">ARTÍCULOS</a></li>
+            <li><a href="explora.html">EXPLORA</a></li>
+            <li><a href="retos.html">RETOS</a></li>
+            <li><a href="interactua.html">INTERACTUA</a></li>
+            <li><a href="galeria.html">GALERIA</a></li>
+
+        </ul>
+        </nav>
+
+    <section class="azul" >
+        En <b>BIOMAR</b>, aprender sobre la vida marina es una aventura.<br> 
+        Aquí podrás descubrir animales increíbles, ver videos asombrosos, leer datos curiosos, jugar juegos divertidos,<br> y participar en desafíos interactivos que te convertirán en un verdadero explorador del océano.
+    </section>
+
+  <section class="video-section">
+   <video autoplay muted>
+              <source src="videos/tortuga%20marina.mp4" type="video/mp4">
+             El navegador no soporta el video
+         </video>
+  </section>
+
+<section class="reg">
+  <div class="quiz">
+    <h2>REGÍSTRATE y ¡Explora con NOSOTROS!</h2><br>
+    <form>
+      <div class="form-group-horizontal">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+      </div>
+
+      <div class="form-group-horizontal">
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" placeholder="Tu contraseña" required>
+      </div>
+
+      <button type="submit" class="btn-enviar"><b>Enviar</b></button>
+    </form>
+  </div>
+</section>
+ 
+        <footer>
+           <div style="text-align: center">
+           <h7><b>Este sitio fue creado con el objetivo de fomentar la conciencia y protección de los océanos.</b></h7>
+           <br>
+      <p>© 2025 BIOMAR - Explora, Aprende y Cuida el Océano<br>
+🔗 Inicio | Sobre Nosotros | Explora Animales | Juegos | Videos y Documentales |<br> Contacto
+📧 Contáctanos: bio@mar.org  <br>📍 Proyecto educativo para jóvenes exploradores del océano  📱 Síguenos:</p>
+          <br>
+          <img class="instagram" src="imagenes/instagram.png" alt="Instagram">
+          <img class="facebook" src="imagenes/facebook.png" alt="Facebook">
+           </div>
+        </footer>
+    </body>
+</html>
